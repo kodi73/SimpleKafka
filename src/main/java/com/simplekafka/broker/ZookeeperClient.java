@@ -32,6 +32,4 @@ public class ZookeeperClient {
             return false;
         }
     }
-
-    
 }
