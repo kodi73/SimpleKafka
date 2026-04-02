@@ -1,3 +1,6 @@
+import java.io.IOException;
+import java.util.List;
+
 public class ZookeeperClient {
     public void connect() throws IOException, InterruptedException {
         zookeeper = new Zookeeper(getConnectString(), SESSION_TIMOUT, this);
@@ -30,6 +33,28 @@ public class ZookeeperClient {
         } else {
             LOGGER.info("Ephemeral node already exists: " + path);
             return false;
+        }
+    }
+
+    public void watchChildren(String path, ChildrenCallback callback) {
+        try {
+            List<String> children = zooKeeper.getChildren(path, event -> {
+                if (event.getType() == Watcher.Event.EventType.NodeChildrenChanged) {
+                    try {
+                        List<String> newChildren = zooKeeper.getChildren(path, event2 -> {
+                            if (event2.getType() == Watcher.Event.EventType.NodeChildrenChanged) {
+                                watchChildren(path, callback);
+                            }
+                        });
+                        callback.onChildrenChanged(newChildren);
+                    } catch (Exception e) {
+                        LOGGER.log(Level.SEVERE, "Error processing children changed event", e);
+                    }
+                }
+            });
+            callback.onChildrenChanged(children);
+        } catch (Exception e) {
+            LOGGER.log(Level.SEVERE, "Failed to watch children for path: " + path, e);
         }
     }
 }
