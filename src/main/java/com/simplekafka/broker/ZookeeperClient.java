@@ -36,6 +36,14 @@ public class ZookeeperClient {
         }
     }
 
+    /**
+     * This function is used for detecting 
+     *      watches new brokers
+     *      watches new topics
+     *      tracks consumer group memberships
+     * @param path
+     * @param callback
+     */
     public void watchChildren(String path, ChildrenCallback callback) {
         try {
             List<String> children = zooKeeper.getChildren(path, event -> {
