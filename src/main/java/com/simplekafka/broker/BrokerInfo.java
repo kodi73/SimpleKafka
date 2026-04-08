@@ -1,4 +1,8 @@
-package main.java.com.simplekafka.broker;
+package com.simplekafka.broker;
+
+/**
+ * Holds broker information in SimpleKafka cluster
+ */
 
 public class BrokerInfo {
     private final int id;
@@ -29,9 +33,11 @@ public class BrokerInfo {
     }
 
     @Override
-    public boolean equals(Object Obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
 
         BrokerInfo other = (BrokerInfo) obj;
         return id == other.id;
