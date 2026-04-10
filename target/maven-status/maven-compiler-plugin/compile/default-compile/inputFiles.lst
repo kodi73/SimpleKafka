@@ -1,4 +1,8 @@
 /run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/broker/BrokerInfo.java
 /run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/broker/Partition.java
 /run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/broker/Protocol.java
+/run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/broker/SimpleKafkaBroker.java
 /run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/broker/ZookeeperClient.java
+/run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/client/SimpleKafkaClient.java
+/run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/client/SimpleKafkaConsumer.java
+/run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/client/SimpleKafkaProducer.java
