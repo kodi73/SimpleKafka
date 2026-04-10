@@ -272,5 +272,6 @@ public class Protocol {
             this.leaderId    = leaderId;
             this.replicaIds  = replicaIds;
         }
+    }
 
 }

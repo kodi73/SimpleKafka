@@ -1,2 +1,4 @@
 /run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/broker/BrokerInfo.java
+/run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/broker/Partition.java
+/run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/broker/Protocol.java
 /run/media/sol/Vol_1/Projections/Java/SimpleKafka/src/main/java/com/simplekafka/broker/ZookeeperClient.java
